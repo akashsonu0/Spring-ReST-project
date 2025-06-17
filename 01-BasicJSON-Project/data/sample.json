@@ -1,0 +1,13 @@
+{
+	"id" : 7,
+	"firstName": "Mahendra Singh",
+	"lastName" : "Dhoni",
+	"active"   : true,
+	"address"  : {
+					"cityName":"CSK",
+					"stateName": "Chennai",
+					"countryName": "IND"
+	},
+	"friendsName": ["sachin","dhoni","dravid"]
+	
+}
