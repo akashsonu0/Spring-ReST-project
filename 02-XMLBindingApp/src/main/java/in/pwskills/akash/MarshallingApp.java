@@ -1,7 +1,7 @@
 package in.pwskills.akash;
-
 import java.io.File;
 
+import in.pwskills.akash.bean.Address;
 import in.pwskills.akash.bean.Person;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
@@ -14,7 +14,14 @@ public class MarshallingApp {
         person.setEmail("sachin@gmail.com");
         person.setGender("male");
         person.setName("sachin");
-
+        
+        Address address = new Address();
+        address.setCity("bandra");
+        address.setState("Maharsshtra");
+        address.setCountry("IND");
+        
+        person.setAddress(address);
+        
         // Create JAXB Context for Person class
         JAXBContext context = JAXBContext.newInstance(Person.class);
 
