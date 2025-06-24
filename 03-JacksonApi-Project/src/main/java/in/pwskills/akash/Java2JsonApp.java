@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -16,8 +17,8 @@ public class Java2JsonApp {
   public static void main(String[] args) throws Exception {
 	  
 	  Order ord1 = new Order(1234,"laptop",true,"good");
-	  Order ord2 = new Order(1113,"mobile",false,"good");
-	  Order ord3 = new Order(2323,"watch",true,"good");
+	  Order ord2 = new Order(null,"mobile",false,"good");
+	  Order ord3 = new Order(2323,"",true,"good");
 
 	  Account account = new Account("123452434","HDFC",new BigDecimal(122344234));
 	  
@@ -28,6 +29,12 @@ public class Java2JsonApp {
 	  //Use JACKSONAPI and covert java object to JSON
 	  ObjectMapper mapper = new ObjectMapper();
 	  mapper.enable(SerializationFeature.INDENT_OUTPUT);
+	  mapper.enable(SerializationFeature.WRAP_ROOT_VALUE);
+	  mapper.setSerializationInclusion(Include.NON_NULL);
+	  mapper.setSerializationInclusion(Include.NON_EMPTY);
+	  
+	  String personAString = mapper.writeValueAsString(person);
+	  System.out.println(personAString);
 	  
 	  mapper.writeValue(new File("src/main/resources/person.json"),person);
 	  System.out.println("Serialization is completed...");

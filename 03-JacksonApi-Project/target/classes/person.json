@@ -1,27 +1,27 @@
 {
-  "firstName" : "sachin",
-  "lastName" : "tendulkar",
-  "emailId" : "sachin@gmail.com",
-  "dob" : 1750669092390,
-  "orders" : [ {
-    "oid" : 1234,
-    "name" : "laptop",
-    "delivered" : true,
-    "desc" : "good"
-  }, {
-    "oid" : 1113,
-    "name" : "mobile",
-    "delivered" : false,
-    "desc" : "good"
-  }, {
-    "oid" : 2323,
-    "name" : "watch",
-    "delivered" : true,
-    "desc" : "good"
-  } ],
-  "account" : {
-    "accountNumber" : "123452434",
-    "bankName" : "HDFC",
-    "balance" : 122344234
+  "person" : {
+    "orders" : [ {
+      "oid" : 1234,
+      "name" : "laptop",
+      "delivered" : true,
+      "desc" : "good"
+    }, {
+      "name" : "mobile",
+      "delivered" : false,
+      "desc" : "good"
+    }, {
+      "oid" : 2323,
+      "delivered" : true,
+      "desc" : "good"
+    } ],
+    "first_name" : "sachin",
+    "emailId" : "sachin@gmail.com",
+    "dob" : 1750743666781,
+    "account" : {
+      "accountNumber" : "123452434",
+      "bankName" : "HDFC",
+      "balance" : 122344234
+    },
+    "last_name" : "tendulkar"
   }
 }

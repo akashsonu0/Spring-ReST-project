@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-	private int oid;
+	private Integer oid;
+	
 	private String name;
-	private boolean delivered;
+	
+	private Boolean delivered;
 	private String desc;
 }
