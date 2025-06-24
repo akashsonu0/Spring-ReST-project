@@ -1,6 +1,7 @@
 package in.pwskills.akash;
 
 import java.io.File;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +21,7 @@ public class Java2JsonApp {
 	  Order ord2 = new Order(null,"mobile",false,"good");
 	  Order ord3 = new Order(2323,"",true,"good");
 
-	  Account account = new Account("123452434","HDFC",new BigDecimal(122344234));
+	  Account account = new Account("123452435","HDFC",new BigDecimal(12234));
 	  
 	  Person person = new Person("sachin","tendulkar",
 			  "sachin@gmail.com",
@@ -32,6 +33,7 @@ public class Java2JsonApp {
 	  mapper.enable(SerializationFeature.WRAP_ROOT_VALUE);
 	  mapper.setSerializationInclusion(Include.NON_NULL);
 	  mapper.setSerializationInclusion(Include.NON_EMPTY);
+	  
 	  
 	  String personAString = mapper.writeValueAsString(person);
 	  System.out.println(personAString);

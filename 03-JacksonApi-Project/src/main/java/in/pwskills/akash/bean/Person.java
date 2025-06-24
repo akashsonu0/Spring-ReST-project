@@ -4,12 +4,15 @@ import java.util.Date;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import in.pwskills.akash.deserialize.CustomDateDeSerialization;
+import in.pwskills.akash.serialize.CustomDateSerialization;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonPropertyOrder(value = {"orders","firstName","emailId"})
 @JsonRootName("person")
+@JsonIgnoreProperties(value = "emailId")
 public class Person {
 	
 	@JsonProperty("first_name")
@@ -27,9 +31,12 @@ public class Person {
 	@JsonProperty("last_name")
 	private String lastName;
 	
+	
 	private String emailId;
 	
-	@JsonIgnore
+	@JsonSerialize(using = CustomDateSerialization.class)
+	@JsonDeserialize(using = CustomDateDeSerialization.class)
+
 	private Date dob;
 
 	//HAS-A order:: multiple orders

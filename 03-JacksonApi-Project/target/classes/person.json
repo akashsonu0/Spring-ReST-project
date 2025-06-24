@@ -6,21 +6,22 @@
       "delivered" : true,
       "desc" : "good"
     }, {
+      "oid" : 2331,
       "name" : "mobile",
       "delivered" : false,
       "desc" : "good"
     }, {
       "oid" : 2323,
+      "name" : "watches",
       "delivered" : true,
       "desc" : "good"
     } ],
     "first_name" : "sachin",
-    "emailId" : "sachin@gmail.com",
-    "dob" : 1750743666781,
+    "dob" : "24-06-2025 11:47:49",
     "account" : {
-      "accountNumber" : "123452434",
+      "accountNumber" : "123452435",
       "bankName" : "HDFC",
-      "balance" : 122344234
+      "balance" : "12234.00"
     },
     "last_name" : "tendulkar"
   }

@@ -15,11 +15,11 @@
       "desc" : "good"
     } ],
     "first_name" : "sachin",
-    "emailId" : "sachin@gmail.com",
+    "dob" : "24-06-2025 12:05:23",
     "account" : {
-      "accountNumber" : "123452434",
+      "accountNumber" : "123452435",
       "bankName" : "HDFC",
-      "balance" : 122344234
+      "balance" : "12234.00"
     },
     "last_name" : "tendulkar"
   }

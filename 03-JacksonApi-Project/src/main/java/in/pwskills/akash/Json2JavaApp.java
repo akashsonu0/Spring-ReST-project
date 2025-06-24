@@ -2,6 +2,7 @@ package in.pwskills.akash;
 
 import java.io.File;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import in.pwskills.akash.bean.Person;
 
@@ -10,6 +11,7 @@ public class Json2JavaApp {
 	  
 	 //Use JACKSONAPI and convert java to JSON 
 	  ObjectMapper mapper = new ObjectMapper();
+	  mapper.enable(DeserializationFeature.UNWRAP_ROOT_VALUE);
 	  
 	  Person person = mapper.readValue(new File("src/main/resources/person.json"), Person.class);
 	  System.out.println(person);
