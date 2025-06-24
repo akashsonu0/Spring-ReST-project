@@ -6,18 +6,16 @@
       "delivered" : true,
       "desc" : "good"
     }, {
-      "oid" : 2331,
       "name" : "mobile",
       "delivered" : false,
       "desc" : "good"
     }, {
       "oid" : 2323,
-      "name" : "watches",
       "delivered" : true,
       "desc" : "good"
     } ],
     "first_name" : "sachin",
-    "dob" : "24-06-2025 11:47:49",
+    "dob" : "24-06-2025 12:05:23",
     "account" : {
       "accountNumber" : "123452435",
       "bankName" : "HDFC",
