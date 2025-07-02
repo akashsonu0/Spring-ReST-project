@@ -21,7 +21,7 @@ public class UserRestController {
 	 *R.T    : ResponseEntity<User> 
 	 *INPUT  : No input
 	 *METHOD : GET
-	 * PARAM : /get
+	 * PATH  : /get
 	 */
 	
 	@GetMapping("/get")
@@ -37,7 +37,7 @@ public class UserRestController {
 	 *R.T    : ResponseEntity<List<Role>> 
 	 *INPUT  : No input
 	 *METHOD : GET
-	 * PARAM : /list
+	 * PATH  : /list
 	 */
 	
 	@GetMapping("/list")
@@ -54,7 +54,7 @@ public class UserRestController {
 	 *R.T    : ResponseEntity<Map<K,V>> 
 	 *INPUT  : No input
 	 *METHOD : GET
-	 * PARAM : /map
+	 * PATH  : /map
 	 */
 	
 	@GetMapping("/map")
