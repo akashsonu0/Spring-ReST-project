@@ -34,7 +34,7 @@ public class Java2JsonApp {
 	  mapper.setSerializationInclusion(Include.NON_NULL);
 	  mapper.setSerializationInclusion(Include.NON_EMPTY);
 	  
-	  
+	 
 	  String personAString = mapper.writeValueAsString(person);
 	  System.out.println(personAString);
 	  
