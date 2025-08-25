@@ -6,13 +6,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.7</version>
+		<version>3.4.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pwskills</groupId>
-	<artifactId>01-springResponseEntityApp</artifactId>
+	<artifactId>04-springResponseEntityApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>01-springResponseEntityApp</name>
+	<name>04-springResponseEntityApp</name>
 	<description>Demo project for Spring Boot</description>
 	
 	<properties>
@@ -36,10 +36,7 @@
        			<artifactId>spring-boot-starter-undertow</artifactId>
       </dependency>
       
-      <dependency>
-        		<groupId>org.springframework.boot</groupId>
-       			<artifactId>spring-boot-starter-jetty</artifactId>
-      </dependency>
+      
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
