@@ -16,6 +16,53 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class EmployeeRestController {
 	
 	/*
+	 *  XML INPUT 
+	 * <Employee>
+	    <empId>10</empId>
+	    <empName>sachin</empName>
+	    <empSal>25000.0</empSal>
+	    <address>
+	        <hno>25/1</hno>
+	        <loc>bandra</loc>
+	    </address>
+	    <friendNames>
+	        <friendNames>saurav</friendNames>
+	        <friendNames>dravid</friendNames>
+	        <friendNames>sehwagh</friendNames>
+	    </friendNames>
+	    <accountDetails>
+	        <hdfc>2345</hdfc>
+	        <canara>1234</canara>
+	    </accountDetails>
+		</Employee>
+		
+		b. JSON INPUT
+		{
+		"Employee": {
+			"empId": "10",
+			"empName": "sachin",
+			"empSal": "25000.0",
+			"address": {
+				"hno": "25/1",
+				"loc": "bandra"
+			},
+			"friendNames": {
+				"friendNames": [
+					"saurav",
+					"dravid",
+					"sehwagh"
+				]
+			},
+			"accountDetails": {
+				"hdfc": "2345",
+				"canara": "1234"
+			}
+		}
+	}
+	 * 
+	 */
+	
+	/*
 	 * R.T    : R
 	 * PATH   : /save
 	 * INPUT  : Employee @RequestBody
