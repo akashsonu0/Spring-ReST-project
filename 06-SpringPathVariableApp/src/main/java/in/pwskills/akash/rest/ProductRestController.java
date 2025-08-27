@@ -1,5 +1,6 @@
 package in.pwskills.akash.rest;
 
+import java.util.Enumeration;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 
 @RestController
@@ -74,6 +77,34 @@ public class ProductRestController {
 		
 		return new ResponseEntity<>(String.format("Listed %d Headers " ,headers.size()),HttpStatus.OK);
 	}
+	
+	/*
+	 * R.T     : ResponseEntity<String>
+	 * METHOD  : GET
+	 * PATH    : /load -> static path 
+	 * INPUT   : No Input
+	 */
+	
+	@GetMapping("/info")
+	public ResponseEntity<String>getHeaderDeatils(
+		HttpServletRequest request
+			) {
+		
+		Enumeration<String> names = request.getHeaderNames();
+		String name = "";
+		String value = "";
+		String body = "";
+		while (names.hasMoreElements()) {
+			name = (String) names.nextElement();
+			value = request.getHeader(name);
+			System.out.println(name + " :" + value);
+			body+=name + " : "+value +"\n";
+			
+		}
+		
+		return new ResponseEntity<>(body,HttpStatus.OK);
+	}
+	
 
 }
 
