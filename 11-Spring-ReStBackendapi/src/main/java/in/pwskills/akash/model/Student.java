@@ -23,26 +23,27 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="sid")
 	private Integer stdId;
-	
-	@Column(name="sname")
-	//@NotNull(message ="name can't be null")
-	//@NotEmpty(message ="name can't be null")
+
+	@Column(name="sname") 
+	//@NotNull(message = "name can't be null")
+	//@NotEmpty(message = "name can't be empty")
 	@NotBlank(message="name can't be blank")
-	@Size(min = 2,max = 15, message = "Name must be b/w 2-15 chars only")
-	@Pattern(regexp ="[A-Za-z]{2,15}", message = "Character a-z and A-Z are permitted")
+	@Size(min = 2,max=15,message = "Name must be b/w 2-15 chars only")
+	@Pattern(regexp = "[A-Za-z]{2,15}",message = "Characters a-z and A-Z are permitted")
 	private String stdName;
 	
-	@Column(name="sgen")
 	@NotBlank(message="std gender can't be blank")
+	@Column(name="sgen")
 	private String stdGen;
 	
 	@Column(name="scourse")
-	@NotBlank(message="course can't be blank")
+	@NotBlank(message="course name can't be blank")
 	private String stdCourse;
 	
 	@Column(name="saddr")
 	@NotBlank(message="address can't be blank")
-	@Size(min = 2, max = 50)
-	@Pattern(regexp="[A-Za-z#/\\.\\-1-9]{2,50}",message ="INVALID ADDRESS DETAILS")
+	@Size(min=2,max=50)
+	@Pattern(regexp = "[A-Za-z#/\\.\\-1-9]{2,50}",message = "Inavlid character range")
 	private String stdAddr;
+	
 }
