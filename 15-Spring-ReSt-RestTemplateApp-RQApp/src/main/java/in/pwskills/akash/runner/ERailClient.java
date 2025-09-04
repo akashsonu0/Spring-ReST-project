@@ -40,6 +40,8 @@ public class ERailClient implements CommandLineRunner {
 		// Creating a ReStTemplate object
 		RestTemplate rt = new RestTemplate();
 		
+		System.out.println("**********SENDING THE REQUEST**********");
+		
 		//Sending the request
 		ResponseEntity<Ticket> ticketEntity = rt.exchange(
 						REST_ENDPOINT_URL, 
@@ -47,6 +49,9 @@ public class ERailClient implements CommandLineRunner {
 						reqEntity, 
 						Ticket.class);
 				
+		System.out.println("**********GETING THE RESPONSE**********");
+
+		
 		System.out.println(ticketEntity.getStatusCode().value());
 				
 		//getting the response object[Ticket object]
